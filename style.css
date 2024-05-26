@@ -1,70 +1,57 @@
-* {
-    /* outline: 2px solid red; */
-}
-
 body {
-    /* height can be deleted */
-    height: 100vh;
+    height: 100dvh;
     margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 header,
 footer {
+    padding: 16px 32px;
     background-color: #1F2937;
-    color: #eeeeee;
-}
-
-header {
-    padding: 16px;
-}
-
-.logo {
-    margin-right: auto;
-    font-size: 24px;
     color: #F9FAF8;
 }
-
+/* header content */
 nav {
     max-width: 1000px;
     margin: auto;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    gap: 16px;
+}
+
+.logo {
+    color: #F9FAF8;
+    font-size: 24px;
 }
 
 .links {
     display: flex;
-
     gap: 16px;
 }
 
 .links a {
-    text-decoration: none;
-    font-size: 18px;
     color: #E5E7EB;
+    font-size: 18px;
+    text-decoration: none;
 }
 
-.header-content {
+header .content {
     max-width: 1000px;
-    display: flex;
-    align-items: center;
     margin: 64px auto;
+    display: flex;
+    flex-wrap: wrap;
     gap: 48px;
 }
 
-.header-text {
+header .content .text {
+    flex: 1 1 250px;
     color: #E5E7EB;
     font-size: 18px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
-.header-text h1 {
+header .text h1 {
     margin: 0;
     color: #F9FAF8;
     font-size: 48px;
@@ -72,29 +59,32 @@ nav {
 }
 
 button {
-    background-color: #3882F6;
-    color: #F9FAF8;
-    font-weight: bold;
     padding: 8px 32px;
     border: none;
     border-radius: 8px;
+    background-color: #3882F6;
+    color: #F9FAF8;
+    font-weight: bold;
 }
 
-.header-content img {
+header .content img {
+    flex: 1 1 250px;
+}
+
+/* main content */
+main {
     flex: 1;
 }
 
-main {
-}
-
-section.info {
+section {
+    padding: 16px 32px;
 }
 
 .info h2 {
-    text-align: center;
+    color: #1F2937;
     font-size: 36px;
     font-weight: bolder;
-    color: #1F2937;
+    text-align: center;
 }
 
 .info .cards {
@@ -119,13 +109,13 @@ section.quote {
     background-color: #E5E7EB;
     font-size: 36px;
     font-style: italic;
-    padding: 64px 0;
     display: flex;
     justify-content: center;
 }
 
-.quote .qoute-box {
+.quote .content {
     max-width: 750px;
+    padding: 64px 64px;
     flex: auto;
     display: flex;
     flex-direction: column;
@@ -140,36 +130,30 @@ section.quote {
 }
 
 section.sign-up {
+    padding: 64px 32px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 64px 0;
 }
 
-.sign-up-box {
-    max-width: 1000px;
+.sign-up .box {
+    width: 1000px;
+    padding: 32px 64px;
     background-color: #3882F6;
     color: #F9FAF8;
     border: none;
     border-radius: 8px;
     display: flex;
+    justify-content: space-around;
     align-items: center;
     gap: 48px;
-    padding: 32px 64px;
-    margin: 16px;
 }
 
-.sign-up-text {
-    flex: 2 1 auto;
-}
-
-.sign-up .sign-up-box button {
+.sign-up .box button {
     border: 2px solid white;
-    flex: 1 0 auto;
 }
 
 footer {
-    padding: 32px;
     display: flex;
     justify-content: center;
     align-items: center;

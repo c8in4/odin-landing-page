@@ -1,4 +1,11 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
+    font-family: "Open Sans", sans-serif;
     height: 100dvh;
     margin: 0;
     display: flex;
@@ -11,7 +18,7 @@ footer {
     background-color: #1F2937;
     color: #F9FAF8;
 }
-/* header content */
+
 nav {
     max-width: 1000px;
     margin: auto;
@@ -71,7 +78,6 @@ header .content img {
     flex: 1 1 250px;
 }
 
-/* main content */
 main {
     flex: 1;
 }
@@ -138,7 +144,7 @@ section.sign-up {
 
 .sign-up .box {
     width: 1000px;
-    padding: 32px 64px;
+    padding: 32px;
     background-color: #3882F6;
     color: #F9FAF8;
     border: none;
@@ -146,14 +152,17 @@ section.sign-up {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     gap: 48px;
 }
 
 .sign-up .box button {
     border: 2px solid white;
+    flex-shrink: 0;
 }
 
 footer {
+    padding: 32px;
     display: flex;
     justify-content: center;
     align-items: center;

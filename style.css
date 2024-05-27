@@ -1,81 +1,97 @@
+html {
+    font-size: 62.5%;
+}
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* design colors */
+:root {
+    --bg-primary: #1F2937;
+    --bg-secondary: #3882F6;
+    --c-primary: #F9FAF8;
+    --c-secondary: #E5E7EB;
+}
+
+/* design elements */
+
+
 body {
     font-family: "Open Sans", sans-serif;
     height: 100dvh;
     margin: 0;
+    font-size: 1.6rem;
     display: flex;
     flex-direction: column;
 }
 
 header,
 footer {
-    padding: 16px 32px;
-    background-color: #1F2937;
-    color: #F9FAF8;
+    padding: 1.6rem 3.2rem;
+    background-color: var(--bg-primary);
+    color: var(--c-primary);
 }
 
 nav {
-    max-width: 1000px;
+    max-width: 100rem;
     margin: auto;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    gap: 16px;
+    gap: 1.6rem;
 }
 
 .logo {
-    color: #F9FAF8;
-    font-size: 24px;
+    color: var(--c-primary);
+    font-size: 2.4rem;
 }
 
 .links {
     display: flex;
-    gap: 16px;
+    gap: 1.6rem;
 }
 
 .links a {
-    color: #E5E7EB;
-    font-size: 18px;
+    color: var(--c-secondary);
+    font-size: 1.8rem;
     text-decoration: none;
 }
 
 header .content {
-    max-width: 1000px;
-    margin: 64px auto;
+    max-width: 100rem;
+    margin: 6.4rem auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 48px;
+    gap: 4.8rem;
 }
 
 header .content .text {
-    flex: 1 1 250px;
-    color: #E5E7EB;
-    font-size: 18px;
+    flex: 1 1 25rem;
+    color: var(--c-secondary);
+    font-size: 1.8rem;
 }
 
 header .text h1 {
     margin: 0;
-    color: #F9FAF8;
-    font-size: 48px;
+    color: var(--c-primary);
+    font-size: 4.8rem;
     font-weight: extra-bold;
 }
 
 button {
-    padding: 8px 32px;
+    padding: 0.8rem 3.2rem;
     border: none;
-    border-radius: 8px;
-    background-color: #3882F6;
-    color: #F9FAF8;
+    border-radius: 0.8rem;
+    background-color: var(--bg-secondary);
+    color: var(--c-primary);
     font-weight: bold;
 }
 
 header .content img {
-    flex: 1 1 250px;
+    flex: 1 1 25rem;
 }
 
 main {
@@ -83,86 +99,87 @@ main {
 }
 
 section {
-    padding: 16px 32px;
+    padding: 1.6rem 3.2rem;
 }
 
 .info h2 {
-    color: #1F2937;
-    font-size: 36px;
+    color: var(--bg-primary);
+    font-size: 3.6rem;
     font-weight: bolder;
     text-align: center;
 }
 
 .info .cards {
-    padding: 16px;
+    padding: 1.6rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 48px;
+    gap: 4.8rem;
 }
 
 .info .card {
-    max-width: 150px;
+    max-width: 15rem;
     text-align: center;
 }
 
 .card img {
-    border: 3px solid #3882F6;
-    border-radius: 10px;
+    border: 0.3rem solid var(--bg-secondary);
+    border-radius: 1rem;
 }
 
 section.quote {
-    background-color: #E5E7EB;
-    font-size: 36px;
+    background-color: var(--c-secondary);
+    font-size: 3.6rem;
     font-style: italic;
+    font-weight: lighter;
     display: flex;
     justify-content: center;
 }
 
 .quote .content {
-    max-width: 750px;
-    padding: 64px 64px;
+    max-width: 75rem;
+    padding: 6.4rem 6.4rem;
     flex: auto;
     display: flex;
     flex-direction: column;
-    margin: 16px;
+    margin: 1.6rem;
 }
 
 .quote .author {
     align-self: flex-end;
-    font-size: 28px;
+    font-size: 2.8rem;
     font-style: normal;
     font-weight: bold;
 }
 
 section.sign-up {
-    padding: 64px 32px;
+    padding: 6.4rem 3.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .sign-up .box {
-    width: 1000px;
-    padding: 32px;
-    background-color: #3882F6;
-    color: #F9FAF8;
+    width: 100rem;
+    padding: 3.2rem;
+    background-color: var(--bg-secondary);
+    color: var(--c-primary);
     border: none;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 48px;
+    gap: 4.8rem;
 }
 
 .sign-up .box button {
-    border: 2px solid white;
+    border: 0.2rem solid var(--c-primary);
     flex-shrink: 0;
 }
 
 footer {
-    padding: 32px;
+    padding: 3.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
